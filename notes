@@ -5,3 +5,14 @@ Connexion à mongoDB
 Test Postman réussis
 
 Lancer le serveur : node src/index.js
+
+Suite :
+
+-> créer DockerFile (node.js)
+-> faire l'image docker
+-> lancer un conteneur docker
+-> config mongodb dans docker avec un fichier .yml
+-> tester le conteneur node et mongo avec une fonction
+-> si test validé publier création d'image
+-> publier l'image sur docker hub (connecter au hub , créer dépôt et push l'image)
+-> git actions
