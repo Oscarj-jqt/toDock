@@ -1,3 +1,6 @@
+Partie App Node express mongoDB
+Todo List
+
 Initialisation app
 Node.js express
 Connexion à mongoDB
@@ -6,11 +9,18 @@ Test Postman réussis
 
 Lancer le serveur : node src/index.js
 
-Suite :
+run  docker run -p 3000:3000 todock-node
 
--> créer DockerFile (node.js)
--> faire l'image docker
--> lancer un conteneur docker
+stop docker docker stop <id>
+
+Suite Docker : 
+Création d'une architecture avec chaque service dans son propre conteneur
+-> créer DockerFile (node.js) fait
+-> faire l'image docker node fait
+-> lancer un conteneur docker node fait
+Si on modifier Dockerfile, il faut refaire l'image
+ On doit faire un conteneur MongoDB pour éviter les conflits
+ --> fichier yml pour config les services (MongoDB...)
 -> config mongodb dans docker avec un fichier .yml
 -> tester le conteneur node et mongo avec une fonction
 -> si test validé publier création d'image

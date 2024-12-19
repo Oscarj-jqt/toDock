@@ -1,1 +1,1 @@
-Lancer le serveur : node src/index.js
+Lancer le serveur : node src/server.js

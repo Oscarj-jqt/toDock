@@ -1,10 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const taskRoutes = require('./routes/routes_task');
+const taskRoutes = require('./src/routes/routes_task');
 const path = require('path');
 
-dotenv.config({ path: path.resolve(__dirname, '../.env') });
+dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 // Chargement des variables d'env
 dotenv.config();
