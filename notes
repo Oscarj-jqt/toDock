@@ -1,0 +1,7 @@
+Initialisation app
+Node.js express
+Connexion à mongoDB
+
+Test Postman réussis
+
+Lancer le serveur : node src/index.js
