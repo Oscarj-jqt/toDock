@@ -15,12 +15,21 @@ router.get('/tasks', async (req, res) => {
 
 // Création d'une tâche
 router.post('/tasks', async (req, res) => {
+     // Récupération les données envoyées dans la requête
+    const { title, completed } = req.body;
+
     try {
-        const task = new Task(req.body);
-        await task.save();
-        res.status(201).send(task);
-    } catch (error) {
-        res.status(400).send(error);
+        const newTask = new Task({
+            title,
+            completed,
+        });
+
+        // Sauvegarde de la tâche créée dans la base de données
+        await newTask.save();
+
+        res.status(201).json(newTask); // Retourner la tâche créée en réponse
+    } catch (err) {
+        res.status(500).json({ error: 'Erreur serveur lors de l\'ajout de la tâche' });
     }
 });
 
