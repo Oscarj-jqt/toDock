@@ -1,9 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const taskRoutes = require('./routes/routes_task');
+
+// Intégration des routes dans le serveur
+app.use(taskRoutes);
 
 // Chargement des variables d'env
-dotenv.config();
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -17,12 +20,6 @@ mongoose.connect(process.env.MONGO_URI)
 .catch((err) => console.error('Erreur de connexion à MongoDB:', err));
 
 
-
-
-// Routes
-app.get('/', (req, res) => {
-    res.send('Bienvenue sur le serveur Node.js !');
-});
 
 
 // Lancement du serveur
