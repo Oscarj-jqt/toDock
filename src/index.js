@@ -3,8 +3,6 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const taskRoutes = require('./routes/routes_task');
 
-// Intégration des routes dans le serveur
-app.use(taskRoutes);
 
 // Chargement des variables d'env
 dotenv.config();
@@ -26,4 +24,7 @@ mongoose.connect(process.env.MONGO_URI)
 app.listen(PORT, () => {
     console.log(`Serveur lancé sur le port ${PORT}`);
 });
+
+// Intégration des routes dans le serveur
+app.use(taskRoutes);
 
