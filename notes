@@ -16,3 +16,5 @@ Suite :
 -> si test validé publier création d'image
 -> publier l'image sur docker hub (connecter au hub , créer dépôt et push l'image)
 -> git actions
+
+dire au prof que je suis connecté matin
