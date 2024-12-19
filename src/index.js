@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3000;
 
 
 app.use(express.json());
-
+app.use('/tasks', taskRoutes);
 // Connecion à MongoDB
 mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log('Connecté à MongoDB '))
