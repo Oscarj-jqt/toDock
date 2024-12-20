@@ -29,4 +29,4 @@ jobs:
         docker images 
 
     - name: Push Docker image to DockerHub
-      run: docker push my-image-name:${{ github.sha }}
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/my-image-name:${{ github.sha }}
