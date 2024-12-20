@@ -42,4 +42,8 @@ mongosh mongodb://localhost:27017
 
 Fonction de test avec jest
 
+mettre les tests dans le workflow
+name: Run tests
+run : |
+    npm test
 

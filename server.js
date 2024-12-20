@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const taskRoutes = require('./routes/routes_task');
+const taskRoutes = require('./src/routes/routes_task');
 const path = require('path');
 
 // Chargement des variables d'env
@@ -16,7 +16,7 @@ app.use(express.json());
 
 
 // Connexion à MongoDB
-mongoose.connect(process.env.MONGO_URI || 'mongodb://mongodb:27017/toDock')
+mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log('Connecté à MongoDB '))
 .catch((err) => console.error('Erreur de connexion à MongoDB:', err));
 
@@ -27,3 +27,6 @@ app.use(taskRoutes);
 app.listen(PORT, () => {
     console.log(`Serveur lancé sur le port ${PORT}`);
 });
+
+// Export pour les tests
+module.exports = app;
