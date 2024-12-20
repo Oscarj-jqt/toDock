@@ -40,4 +40,6 @@ docker exec -i mongodb mongorestore --drop --dir=/chemin/vers/dossier
 se connecter au conteneur mongodb
 mongosh mongodb://localhost:27017
 
+Fonction de test avec jest
+
 
