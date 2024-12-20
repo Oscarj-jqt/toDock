@@ -2,7 +2,7 @@ const input = document.getElementById('input');
 const ajouter = document.getElementById('ajouter');
 const liste = document.getElementById('list');
 
-// Fonctionalité d'ajout
+// Fonctionalité d'ajout de tâche
 ajouter.addEventListener('click', async () => {
     console.log('Bouton "Ajouter" cliqué'); 
     const taskTitle = input.value;
