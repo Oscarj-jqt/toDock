@@ -20,6 +20,10 @@ mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log('Connecté à MongoDB '))
 .catch((err) => console.error('Erreur de connexion à MongoDB:', err));
 
+// Fichier statiues
+
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Intégration des routes dans le serveur
 app.use(taskRoutes);
 
