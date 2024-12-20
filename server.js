@@ -24,9 +24,11 @@ mongoose.connect(process.env.MONGO_URI)
 app.use(taskRoutes);
 
 // Lancement du serveur
-app.listen(PORT, () => {
-    console.log(`Serveur lancé sur le port ${PORT}`);
-});
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`Serveur lancé sur le port ${PORT}`);
+    });
+}
 
 // Export pour les tests
 module.exports = app;
