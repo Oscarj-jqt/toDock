@@ -27,4 +27,52 @@ Si on modifier Dockerfile, il faut refaire l'image
 -> publier l'image sur docker hub (connecter au hub , créer dépôt et push l'image)
 -> git actions
 
-dire au prof que je suis connecté matin
+supprimer les conteneur docker-compose down
+
+recontruire docker-compose up --build
+
+
+todock-app
+
+af5746f7ae85
+
+latest
+
+In use
+9 hours ago
+
+1.17 GB
+
+todock-node
+
+01ac136792db
+
+latest
+
+In use
+10 hours ago
+
+1.17 GB
+
+<none>
+
+7c598f24cb89
+
+<none>
+
+In use (dangling)
+11 hours ago
+
+1.17 GB
+
+mongo
+
+f08e39122805
+
+latest
+
+In use
+13 days ago
+
+854.89 MB
+
