@@ -1,6 +1,13 @@
 const request = require('supertest');
 const app = require('./server');
+const mongoose = require('mongoose');
+const Task = require('./src/models/task');
 
+// vide la bdd 
+beforeEach(async () => {
+    // Réinitialiser la base de données avant chaque test
+    await Task.deleteMany();
+  });
 
 // On teste la route tasks 
 describe('Test de l\'API /tasks', () => {
