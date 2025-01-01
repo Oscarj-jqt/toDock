@@ -18,6 +18,9 @@ ajouter.addEventListener('click', async () => {
             body: JSON.stringify({ title: taskTitle })
         });
 
+        console.log('Réponse de la requête fetch :', response);
+        const result = await response.json();
+        console.log('Données reçues après fetch :', result);
         if (response.ok) {
             console.log('Tâche ajoutée avec succès'); 
             input.value = ''; 

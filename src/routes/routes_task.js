@@ -15,23 +15,24 @@ router.get('/tasks', async (req, res) => {
 
 // Création d'une tâche
 router.post('/tasks', async (req, res) => {
-     // Récupération les données envoyées dans la requête
     const { title, completed } = req.body;
+    console.log('Requête reçue :', req.body); // Afficher le corps de la requête
 
     try {
-        const newTask = new Task({
-            title,
-            completed,
-        });
+        const newTask = new Task({ title, completed });
+        console.log('Nouvelle tâche créée :', newTask); // Vérifiez que l'objet Task est créé correctement
 
-        // Sauvegarde de la tâche créée dans la base de données
-        await newTask.save();
+        const savedTask = await newTask.save();
+        console.log('Tâche sauvegardée dans MongoDB :', savedTask); // Vérifiez que la tâche est bien sauvegardée
 
-        res.status(201).json(newTask); // Retourner la tâche créée en réponse
+        res.status(201).json(savedTask); // Retourner la tâche sauvegardée
     } catch (err) {
+        console.error('Erreur lors de la sauvegarde dans MongoDB :', err.message); // Ajoutez des détails sur l'erreur
         res.status(500).json({ error: 'Erreur serveur lors de l\'ajout de la tâche' });
     }
 });
+
+
 
 // Supression de tâche
 router.delete('/:id', async (req, res) => {
